@@ -2,6 +2,12 @@
 
 Simple example of Spring Boot + Apache Kafka.
 
+
+## Architecture
+
+![alt text](https://github.com/namichetti/Spring-Boot-and-Apache-Kafka-Simple-example/blob/main/Screenshot_6.png?raw=true)
+
+
 ## Setting up
 
 Download Kafka and Zookeeper images from docker hub and run their containers.
