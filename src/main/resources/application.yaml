@@ -1,0 +1,29 @@
+server:
+  port: 8585
+
+#Consumer
+
+spring:
+  kafka:
+    consumer:
+      # kafka broker server address
+      bootstrap-servers: localhost:9092
+      # Nombre de mi grupo de consumidores
+      group-id: myGroup
+      #Cuando la aplicación del consumidor se inicializa por primera vez o se vincula a un topic
+      #y quiere consumir los mensajes históricos presentes en un topic, el consumidor debe configurar
+      #auto.offset.reset = earliest
+      auto-offset-reset: earliest
+      # Para serializar y deserializar un valor en un mensaje
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring:
+          json:
+            trusted:
+              packages: '*'
+#Producer
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
