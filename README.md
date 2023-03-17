@@ -3,7 +3,7 @@
 Simple example of Spring Boot + Apache Kafka.
 
 
-## Architecture
+## Architecture (just for remind you...)
 
 ![alt text](https://github.com/namichetti/Spring-Boot-and-Apache-Kafka-Simple-example/blob/main/Screenshot_6.png?raw=true)
 
